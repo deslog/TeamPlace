@@ -11,9 +11,7 @@
 		38AE093E281D38FC0035EB0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE093D281D38FC0035EB0C /* ContentView.swift */; };
 		38AE0940281D38FD0035EB0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AE093F281D38FD0035EB0C /* Assets.xcassets */; };
 		38AE0943281D38FD0035EB0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AE0942281D38FD0035EB0C /* Preview Assets.xcassets */; };
-		38AE094D281D38FD0035EB0C /* TeamPlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE094C281D38FD0035EB0C /* TeamPlaceTests.swift */; };
-		38AE0957281D38FD0035EB0C /* TeamPlaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0956281D38FD0035EB0C /* TeamPlaceUITests.swift */; };
-		38AE0959281D38FD0035EB0C /* TeamPlaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0958281D38FD0035EB0C /* TeamPlaceUITestsLaunchTests.swift */; };
+		38AE0966281E34E50035EB0C /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0965281E34E50035EB0C /* PlaceData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +38,8 @@
 		38AE093F281D38FD0035EB0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38AE0942281D38FD0035EB0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38AE0948281D38FD0035EB0C /* TeamPlaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamPlaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38AE094C281D38FD0035EB0C /* TeamPlaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlaceTests.swift; sourceTree = "<group>"; };
 		38AE0952281D38FD0035EB0C /* TeamPlaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamPlaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38AE0956281D38FD0035EB0C /* TeamPlaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlaceUITests.swift; sourceTree = "<group>"; };
-		38AE0958281D38FD0035EB0C /* TeamPlaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38AE0965281E34E50035EB0C /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				38AE093A281D38FC0035EB0C /* TeamPlace */,
-				38AE094B281D38FD0035EB0C /* TeamPlaceTests */,
-				38AE0955281D38FD0035EB0C /* TeamPlaceUITests */,
 				38AE0939281D38FC0035EB0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +91,7 @@
 				38AE093B281D38FC0035EB0C /* TeamPlaceApp.swift */,
 				38AE093D281D38FC0035EB0C /* ContentView.swift */,
 				38AE093F281D38FD0035EB0C /* Assets.xcassets */,
+				38AE0965281E34E50035EB0C /* PlaceData.swift */,
 				38AE0941281D38FD0035EB0C /* Preview Content */,
 			);
 			path = TeamPlace;
@@ -108,23 +103,6 @@
 				38AE0942281D38FD0035EB0C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		38AE094B281D38FD0035EB0C /* TeamPlaceTests */ = {
-			isa = PBXGroup;
-			children = (
-				38AE094C281D38FD0035EB0C /* TeamPlaceTests.swift */,
-			);
-			path = TeamPlaceTests;
-			sourceTree = "<group>";
-		};
-		38AE0955281D38FD0035EB0C /* TeamPlaceUITests */ = {
-			isa = PBXGroup;
-			children = (
-				38AE0956281D38FD0035EB0C /* TeamPlaceUITests.swift */,
-				38AE0958281D38FD0035EB0C /* TeamPlaceUITestsLaunchTests.swift */,
-			);
-			path = TeamPlaceUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +237,7 @@
 			files = (
 				38AE093E281D38FC0035EB0C /* ContentView.swift in Sources */,
 				38AE093C281D38FC0035EB0C /* TeamPlaceApp.swift in Sources */,
+				38AE0966281E34E50035EB0C /* PlaceData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38AE094D281D38FD0035EB0C /* TeamPlaceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38AE0957281D38FD0035EB0C /* TeamPlaceUITests.swift in Sources */,
-				38AE0959281D38FD0035EB0C /* TeamPlaceUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
