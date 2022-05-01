@@ -2,6 +2,7 @@ import SwiftUI
 
 struct MyPlaceList: View {
     @State private var gridRows = Array(repeating: GridItem(.flexible()), count: 1)
+//    @State private var giveImage = ""
     var myPlaceList = Place.all()
     
     var body: some View {
@@ -9,9 +10,7 @@ struct MyPlaceList: View {
             LazyHGrid(rows: gridRows){
                 ForEach(self.myPlaceList, id:\.name) { place in
                     place.wish ?
-                        Button(action: {
-                            //버튼 액션
-                        }, label: {
+                    NavigationLink(destination: PlaceInfoView(), label: {
                             ZStack {
                                 Image(place.imageURL)
                                     .resizable()

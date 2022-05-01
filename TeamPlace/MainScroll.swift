@@ -5,14 +5,14 @@ struct MainScroll: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text("My Place")
+                Text("My Place📍")
                     .bold()
                     .font(.system(size: 25))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(EdgeInsets(top: 16, leading: 16, bottom: 5, trailing: 16))
                 MyPlaceList()
                     .frame(height: 200)
-                Text("Team Place")
+                Text("More Place🔎")
                     .bold()
                     .font(.system(size: 25))
                     .frame(maxWidth: .infinity, alignment: .leading)

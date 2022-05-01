@@ -15,6 +15,8 @@
 		38AE0971281E43400035EB0C /* MyPlaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0970281E43400035EB0C /* MyPlaceList.swift */; };
 		38AE0973281E9D090035EB0C /* PlaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0972281E9D090035EB0C /* PlaceList.swift */; };
 		38AE0975281EBC170035EB0C /* MainScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0974281EBC170035EB0C /* MainScroll.swift */; };
+		38AE0977281ED4860035EB0C /* AddPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0976281ED4860035EB0C /* AddPlaceView.swift */; };
+		38AE0979281ED7880035EB0C /* PlaceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0978281ED7880035EB0C /* PlaceInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		38AE0970281E43400035EB0C /* MyPlaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceList.swift; sourceTree = "<group>"; };
 		38AE0972281E9D090035EB0C /* PlaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceList.swift; sourceTree = "<group>"; };
 		38AE0974281EBC170035EB0C /* MainScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScroll.swift; sourceTree = "<group>"; };
+		38AE0976281ED4860035EB0C /* AddPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceView.swift; sourceTree = "<group>"; };
+		38AE0978281ED7880035EB0C /* PlaceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +98,13 @@
 		38AE093A281D38FC0035EB0C /* TeamPlace */ = {
 			isa = PBXGroup;
 			children = (
-				38AE093D281D38FC0035EB0C /* MainView.swift */,
-				38AE0970281E43400035EB0C /* MyPlaceList.swift */,
 				38AE093B281D38FC0035EB0C /* TeamPlaceApp.swift */,
-				38AE0972281E9D090035EB0C /* PlaceList.swift */,
+				38AE093D281D38FC0035EB0C /* MainView.swift */,
 				38AE0974281EBC170035EB0C /* MainScroll.swift */,
+				38AE0970281E43400035EB0C /* MyPlaceList.swift */,
+				38AE0972281E9D090035EB0C /* PlaceList.swift */,
+				38AE0976281ED4860035EB0C /* AddPlaceView.swift */,
+				38AE0978281ED7880035EB0C /* PlaceInfoView.swift */,
 				38AE0967281E358C0035EB0C /* Data */,
 				38AE093F281D38FD0035EB0C /* Assets.xcassets */,
 				38AE0941281D38FD0035EB0C /* Preview Content */,
@@ -254,8 +260,10 @@
 			files = (
 				38AE093E281D38FC0035EB0C /* MainView.swift in Sources */,
 				38AE0973281E9D090035EB0C /* PlaceList.swift in Sources */,
+				38AE0979281ED7880035EB0C /* PlaceInfoView.swift in Sources */,
 				38AE0975281EBC170035EB0C /* MainScroll.swift in Sources */,
 				38AE0969281E35A00035EB0C /* PlaceData.swift in Sources */,
+				38AE0977281ED4860035EB0C /* AddPlaceView.swift in Sources */,
 				38AE093C281D38FC0035EB0C /* TeamPlaceApp.swift in Sources */,
 				38AE0971281E43400035EB0C /* MyPlaceList.swift in Sources */,
 			);
