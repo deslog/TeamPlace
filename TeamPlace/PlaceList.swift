@@ -7,13 +7,13 @@ struct PlaceList: View {
     var body: some View {
         LazyVGrid(columns: gridCols) {
             ForEach(self.myPlaceList, id:\.name) { place in
-                NavigationLink(destination: PlaceInfoView(), label: {
+                NavigationLink(destination: PlaceInfoView(giveImage: place.imageURL), label: {
                         ZStack {
                             Image(place.imageURL)
                                 .resizable()
                                 .edgesIgnoringSafeArea(.all)
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: .infinity, height: 200)
+//                                .aspectRatio(contentMode: .fill)
+                                .frame(maxWidth: .infinity, maxHeight: 200)
                                 .overlay( Color.black.opacity(0.4))
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                             VStack {
@@ -29,10 +29,10 @@ struct PlaceList: View {
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
                             .padding()
-                            .frame(width: .infinity, height: 200, alignment: .bottom)
+                            .frame(maxWidth: .infinity, maxHeight: 200, alignment: .bottom)
                         }
                     })
-                .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
             }
         }
     }
