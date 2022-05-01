@@ -18,12 +18,20 @@ struct PlaceList: View {
                             .frame(width: .infinity, height: 200)
                             .overlay( Color.black.opacity(0.4))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
-                        Text(place.name)
-                            .bold()
-                            .foregroundColor(Color.white)
-                            .font(.system(size: 20))
-                            .multilineTextAlignment(.leading)
-                            .frame(width: 140)
+                        VStack {
+                            Text(place.name)
+                                .bold()
+                                .foregroundColor(Color.white)
+                                .font(.system(size: 20))
+                                .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            Text(place.address)
+                                .font(.system(size: 16))
+                                .foregroundColor(Color.white)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .padding(.all, 16)
+                        .frame(width: .infinity, height: 200, alignment: .bottom)
                     }
                 })
             }

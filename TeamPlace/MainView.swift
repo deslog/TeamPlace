@@ -12,7 +12,7 @@ struct MainView: View {
                     .padding(EdgeInsets(top: 16, leading: 16, bottom: 5, trailing: 16))
                 MyPlaceList()
                     .frame(height: 200)
-                Text("Team Place ")
+                Text("Team Place")
                     .bold()
                     .font(.system(size: 25))
                     .frame(maxWidth: .infinity, alignment: .leading)
