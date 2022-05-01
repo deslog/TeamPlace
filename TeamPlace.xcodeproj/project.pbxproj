@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		38AE093C281D38FC0035EB0C /* TeamPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE093B281D38FC0035EB0C /* TeamPlaceApp.swift */; };
-		38AE093E281D38FC0035EB0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE093D281D38FC0035EB0C /* ContentView.swift */; };
+		38AE093E281D38FC0035EB0C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE093D281D38FC0035EB0C /* MainView.swift */; };
 		38AE0940281D38FD0035EB0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AE093F281D38FD0035EB0C /* Assets.xcassets */; };
 		38AE0943281D38FD0035EB0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AE0942281D38FD0035EB0C /* Preview Assets.xcassets */; };
-		38AE0966281E34E50035EB0C /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0965281E34E50035EB0C /* PlaceData.swift */; };
+		38AE0969281E35A00035EB0C /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0968281E35A00035EB0C /* PlaceData.swift */; };
+		38AE0971281E43400035EB0C /* MyPlaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0970281E43400035EB0C /* MyPlaceList.swift */; };
+		38AE0973281E9D090035EB0C /* PlaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE0972281E9D090035EB0C /* PlaceList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +36,14 @@
 /* Begin PBXFileReference section */
 		38AE0938281D38FC0035EB0C /* TeamPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AE093B281D38FC0035EB0C /* TeamPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlaceApp.swift; sourceTree = "<group>"; };
-		38AE093D281D38FC0035EB0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38AE093D281D38FC0035EB0C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		38AE093F281D38FD0035EB0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38AE0942281D38FD0035EB0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38AE0948281D38FD0035EB0C /* TeamPlaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamPlaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AE0952281D38FD0035EB0C /* TeamPlaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamPlaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38AE0965281E34E50035EB0C /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
+		38AE0968281E35A00035EB0C /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
+		38AE0970281E43400035EB0C /* MyPlaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceList.swift; sourceTree = "<group>"; };
+		38AE0972281E9D090035EB0C /* PlaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +92,12 @@
 		38AE093A281D38FC0035EB0C /* TeamPlace */ = {
 			isa = PBXGroup;
 			children = (
+				38AE093D281D38FC0035EB0C /* MainView.swift */,
+				38AE0970281E43400035EB0C /* MyPlaceList.swift */,
 				38AE093B281D38FC0035EB0C /* TeamPlaceApp.swift */,
-				38AE093D281D38FC0035EB0C /* ContentView.swift */,
+				38AE0972281E9D090035EB0C /* PlaceList.swift */,
+				38AE0967281E358C0035EB0C /* Data */,
 				38AE093F281D38FD0035EB0C /* Assets.xcassets */,
-				38AE0965281E34E50035EB0C /* PlaceData.swift */,
 				38AE0941281D38FD0035EB0C /* Preview Content */,
 			);
 			path = TeamPlace;
@@ -103,6 +109,14 @@
 				38AE0942281D38FD0035EB0C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38AE0967281E358C0035EB0C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				38AE0968281E35A00035EB0C /* PlaceData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38AE093E281D38FC0035EB0C /* ContentView.swift in Sources */,
+				38AE093E281D38FC0035EB0C /* MainView.swift in Sources */,
+				38AE0973281E9D090035EB0C /* PlaceList.swift in Sources */,
+				38AE0969281E35A00035EB0C /* PlaceData.swift in Sources */,
 				38AE093C281D38FC0035EB0C /* TeamPlaceApp.swift in Sources */,
-				38AE0966281E34E50035EB0C /* PlaceData.swift in Sources */,
+				38AE0971281E43400035EB0C /* MyPlaceList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
