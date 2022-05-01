@@ -1,10 +1,16 @@
 import SwiftUI
 
 struct PlaceInfoView: View {
-//    @Binding var giveImage: String
+    @State var giveImage: String
     
     var body: some View {
-        Text("여기는 PlaceInfoView 페이지")
+        VStack{
+            Text("여기는 PlaceInfoView 페이지")
+            Image(giveImage)
+                .resizable()
+                .frame(width: 200, height: 200, alignment: .center)
+        }
+
     }
 }
 
