@@ -10,7 +10,7 @@ struct MyPlaceList: View {
             LazyHGrid(rows: gridRows){
                 ForEach(self.myPlaceList, id:\.name) { place in
                     place.wish ?
-                    NavigationLink(destination: PlaceInfoView(giveImage: place.imageURL), label: {
+                    NavigationLink(destination: PlaceInfoView(infoViewImage: place.imageURL, infoViewName: place.name, infoViewAddress: place.address), label: {
                             ZStack {
                                 Image(place.imageURL)
                                     .resizable()
