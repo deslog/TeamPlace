@@ -5,16 +5,25 @@ struct PlaceInfoView: View {
     @State var infoViewName: String
     @State var infoViewAddress: String
     
-    var infoRectangle: some View {
-            ZStack {
+    var infoCard: some View {
+        VStack (spacing: -140) {
                 RoundedRectangle(cornerRadius: 20)
                     .frame(width: 300, height: 170, alignment: .center)
                     .foregroundColor(Color.white)
                     .shadow(color: Color.gray.opacity(0.2), radius: 1, x: 3, y: 3)
                     .shadow(color: Color.gray.opacity(0.2), radius: 1, x: -3, y: -3)
-                Text(infoViewName)
-                    .bold()
-                    .foregroundColor(Color.brown)
+                
+                VStack {
+                    Text(infoViewName)
+                        .bold()
+                        .font(.system(size: 26))
+                    .foregroundColor(Color.black)
+                    
+                    Text(infoViewAddress)
+                        .font(.system(size: 18))
+                        .foregroundColor(Color.black)
+                }
+                
             }
     }
     
@@ -26,7 +35,7 @@ struct PlaceInfoView: View {
                     .resizable()
                     .frame(maxWidth: .infinity, maxHeight: 290, alignment: .topLeading)
                     .ignoresSafeArea()
-                infoRectangle
+                infoCard
             }
             Spacer()
         }
