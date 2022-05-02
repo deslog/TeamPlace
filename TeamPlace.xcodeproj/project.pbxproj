@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38A9AADF281FC56A002BFB4B /* CategoryBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9AADE281FC56A002BFB4B /* CategoryBtn.swift */; };
 		38AE093C281D38FC0035EB0C /* TeamPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE093B281D38FC0035EB0C /* TeamPlaceApp.swift */; };
 		38AE093E281D38FC0035EB0C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE093D281D38FC0035EB0C /* MainView.swift */; };
 		38AE0940281D38FD0035EB0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AE093F281D38FD0035EB0C /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38A9AADE281FC56A002BFB4B /* CategoryBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBtn.swift; sourceTree = "<group>"; };
 		38AE0938281D38FC0035EB0C /* TeamPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AE093B281D38FC0035EB0C /* TeamPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlaceApp.swift; sourceTree = "<group>"; };
 		38AE093D281D38FC0035EB0C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				38AE0972281E9D090035EB0C /* PlaceList.swift */,
 				38AE0976281ED4860035EB0C /* AddPlaceView.swift */,
 				38AE0978281ED7880035EB0C /* PlaceInfoView.swift */,
+				38A9AADE281FC56A002BFB4B /* CategoryBtn.swift */,
 				38AE0967281E358C0035EB0C /* Data */,
 				38AE093F281D38FD0035EB0C /* Assets.xcassets */,
 				38AE0941281D38FD0035EB0C /* Preview Content */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38AE093E281D38FC0035EB0C /* MainView.swift in Sources */,
+				38A9AADF281FC56A002BFB4B /* CategoryBtn.swift in Sources */,
 				38AE0973281E9D090035EB0C /* PlaceList.swift in Sources */,
 				38AE0979281ED7880035EB0C /* PlaceInfoView.swift in Sources */,
 				38AE0975281EBC170035EB0C /* MainScroll.swift in Sources */,
