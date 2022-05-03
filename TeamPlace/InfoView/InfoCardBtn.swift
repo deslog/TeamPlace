@@ -8,6 +8,11 @@ struct InfoCardBtn: View {
     @State private var showMapModal = false
     @State var wish = false
     
+    func encodeURL(_ url: String) -> URL? {
+        let encodedStr = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        return URL(string: encodedStr)!
+    }
+    
     var btnLocation: some View {
         Button(action: {
             self.showMapModal = true
@@ -56,7 +61,7 @@ struct InfoCardBtn: View {
     }
     
     func share() {
-        guard let urlShare = URL(string: "http://naver.com") else { return }
+        guard let urlShare = URL(string: "http://map.naver.com/v5/search/\(encodeURL(cardName)!)") else { return }
         let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
         UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
     }
