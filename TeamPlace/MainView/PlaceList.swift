@@ -7,7 +7,7 @@ struct PlaceList: View {
     var body: some View {
         LazyVGrid(columns: gridCols) {
             ForEach(self.myPlaceList, id:\.name) { place in
-                NavigationLink(destination: PlaceInfoView(infoViewImage: place.imageURL, infoViewName: place.name, infoViewAddress: place.address), label: {
+                NavigationLink(destination: PlaceInfoView(infoViewImage: place.imageURL, infoViewName: place.name, infoViewAddress: place.address, infoViewLat: place.latitude, infoViewLon: place.longitude), label: {
                         ZStack {
                             Image(place.imageURL)
                                 .resizable()

@@ -4,6 +4,8 @@ struct PlaceInfoView: View {
     @State var infoViewImage: String
     @State var infoViewName: String
     @State var infoViewAddress: String
+    @State var infoViewLat: Double
+    @State var infoViewLon: Double
     
     var infoCard: some View {
         VStack (spacing: -140) {
@@ -23,7 +25,7 @@ struct PlaceInfoView: View {
                         .font(.system(size: 18))
                         .foregroundColor(Color.black)
                     
-                InfoCardBtn()
+                InfoCardBtn(cardName: $infoViewName, cardAddress: $infoViewAddress, cardLat: $infoViewLat, cardLon: $infoViewLon)
                 }
             }
     }

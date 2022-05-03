@@ -1,7 +1,7 @@
 import SwiftUI
 import MapKit
 
-struct mapPlace: Identifiable {
+struct MapPlace: Identifiable {
     let id = UUID()
     let name: String
     let latitude: Double
@@ -12,12 +12,12 @@ struct mapPlace: Identifiable {
 }
 
 struct MapModel: View {
+    @Binding var mapName: String
+    @Binding var mapLat: Double
+    @Binding var mapLon: Double
     let screenHeight = UIScreen.main.bounds.size.height
     @Environment(\.presentationMode) var presentation
-
-    let places = [
-        mapPlace(name: "nameanems", latitude: 36.0140, longitude: 129.3258)
-    ]
+    var places : [MapPlace] = []
 
     @State var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 36.0140, longitude: 129.3258),
@@ -26,7 +26,7 @@ struct MapModel: View {
 
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $region, annotationItems: places) { place in
+            Map(coordinateRegion: $region, annotationItems: [MapPlace(name: mapName, latitude: mapLat, longitude: mapLon)]) { place in
                 MapMarker(coordinate: place.coordinate)
             }
             .ignoresSafeArea(.all)
@@ -48,8 +48,8 @@ struct MapModel: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapModel()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MapModel()
+//    }
+//}

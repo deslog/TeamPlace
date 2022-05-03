@@ -1,6 +1,10 @@
 import SwiftUI
 
 struct InfoCardBtn: View {
+    @Binding var cardName: String
+    @Binding var cardAddress: String
+    @Binding var cardLat: Double
+    @Binding var cardLon: Double
     @State private var showMapModal = false
     @State var wish = false
     
@@ -16,7 +20,7 @@ struct InfoCardBtn: View {
                 .foregroundColor(Color.black)
         })
         .sheet(isPresented: $showMapModal, content: {
-            MapModel()
+            MapModel(mapName: $cardName, mapLat: $cardLat, mapLon: $cardLon)
         })
     }
 
@@ -64,7 +68,7 @@ struct InfoCardBtn: View {
                 .padding(.all, 5)
             btnHeart
                 .padding(.all, 5)
-            ShareBtn()
+            btnShare
                 .padding(.all, 5)
         }
         .frame(width: 300)
