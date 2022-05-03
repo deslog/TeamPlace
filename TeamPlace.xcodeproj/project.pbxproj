@@ -84,6 +84,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38A9AD972820C35B002BFB4B /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				38AE093D281D38FC0035EB0C /* MainView.swift */,
+				38AE0974281EBC170035EB0C /* MainScroll.swift */,
+				38A9AADE281FC56A002BFB4B /* CategoryBtn.swift */,
+				38AE0970281E43400035EB0C /* MyPlaceList.swift */,
+				38AE0972281E9D090035EB0C /* PlaceList.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		38A9AD982820C37C002BFB4B /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				38A9AD9228200DB3002BFB4B /* MapModel.swift */,
+				38AE0978281ED7880035EB0C /* PlaceInfoView.swift */,
+				38A9AAE0281FCEEB002BFB4B /* InfoCardBtn.swift */,
+			);
+			path = InfoView;
+			sourceTree = "<group>";
+		};
 		38AE092F281D38FC0035EB0C = {
 			isa = PBXGroup;
 			children = (
@@ -105,17 +127,11 @@
 		38AE093A281D38FC0035EB0C /* TeamPlace */ = {
 			isa = PBXGroup;
 			children = (
+				38A9AD982820C37C002BFB4B /* InfoView */,
+				38A9AD972820C35B002BFB4B /* MainView */,
 				38A9AD942820148C002BFB4B /* Info.plist */,
 				38AE093B281D38FC0035EB0C /* TeamPlaceApp.swift */,
-				38AE093D281D38FC0035EB0C /* MainView.swift */,
-				38AE0974281EBC170035EB0C /* MainScroll.swift */,
-				38A9AADE281FC56A002BFB4B /* CategoryBtn.swift */,
-				38AE0970281E43400035EB0C /* MyPlaceList.swift */,
-				38AE0972281E9D090035EB0C /* PlaceList.swift */,
 				38AE0976281ED4860035EB0C /* AddPlaceView.swift */,
-				38AE0978281ED7880035EB0C /* PlaceInfoView.swift */,
-				38A9AAE0281FCEEB002BFB4B /* InfoCardBtn.swift */,
-				38A9AD9228200DB3002BFB4B /* MapModel.swift */,
 				38AE0967281E358C0035EB0C /* Data */,
 				38AE093F281D38FD0035EB0C /* Assets.xcassets */,
 				38AE0941281D38FD0035EB0C /* Preview Content */,

@@ -1,6 +1,6 @@
 import MapKit
 
-struct Place {
+struct Place: Identifiable {
     let id = UUID()
     let name: String
     let imageURL: String

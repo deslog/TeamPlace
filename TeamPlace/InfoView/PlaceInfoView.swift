@@ -8,12 +8,12 @@ struct PlaceInfoView: View {
     var infoCard: some View {
         VStack (spacing: -140) {
                 RoundedRectangle(cornerRadius: 20)
-                    .frame(width: 300, height: 170, alignment: .center)
+                    .frame(width: 310, height: 170, alignment: .center)
                     .foregroundColor(Color.white)
                     .shadow(color: Color.gray.opacity(0.2), radius: 1, x: 3, y: 3)
                     .shadow(color: Color.gray.opacity(0.2), radius: 1, x: -3, y: -3)
                 
-                VStack {
+            VStack (spacing: 10){
                     Text(infoViewName)
                         .bold()
                         .font(.system(size: 26))
@@ -22,8 +22,9 @@ struct PlaceInfoView: View {
                     Text(infoViewAddress)
                         .font(.system(size: 18))
                         .foregroundColor(Color.black)
+                    
+                InfoCardBtn()
                 }
-                
             }
     }
     
@@ -45,9 +46,9 @@ struct PlaceInfoView: View {
 
 
 
-struct PlaceInfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlaceInfoView(infoViewImage: "cafe2", infoViewName: "이름이뭐예요", infoViewAddress: "남구 12134")
-            .previewInterfaceOrientation(.portraitUpsideDown)
-    }
-}
+//struct PlaceInfoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlaceInfoView(infoViewImage: "cafe2", infoViewName: "이름이뭐예요", infoViewAddress: "남구 12134")
+//            .previewInterfaceOrientation(.portraitUpsideDown)
+//    }
+//}

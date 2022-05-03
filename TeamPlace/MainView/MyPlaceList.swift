@@ -2,9 +2,8 @@ import SwiftUI
 
 struct MyPlaceList: View {
     @State private var gridRows = Array(repeating: GridItem(.flexible()), count: 1)
-//    @State private var giveImage = ""
     var myPlaceList = Place.all()
-    
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             LazyHGrid(rows: gridRows){
