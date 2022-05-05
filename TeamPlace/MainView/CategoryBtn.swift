@@ -12,9 +12,9 @@ struct CategoryBtn: View {
                         currentIdx = categoryList.firstIndex(of: value)!
                     }
                     .frame(width: 69, height: 30, alignment: .center)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
                     .background(RoundedRectangle(cornerRadius: 40)
-                        .fill( currentIdx == categoryList.firstIndex(of: value)!  ? Color.brown : Color.gray))
+                        .fill( currentIdx == categoryList.firstIndex(of: value)!  ? Color.primaryColor : Color.lightGray))
                 }
             }
         }

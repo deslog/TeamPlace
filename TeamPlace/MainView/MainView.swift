@@ -12,7 +12,7 @@ struct MainView: View {
                             Image(systemName: "plus.circle")
                                 .padding(.vertical, 16)
                                 .font(.system(size: 25))
-                                .foregroundColor(Color.brown)
+                                .foregroundColor(Color.primaryColor)
                         }
                     }
                 })
