@@ -2,13 +2,13 @@ import SwiftUI
 
 struct LoginMain: View {
     var body: some View {
-        NavigationView {
-            VStack(spacing: 0) {
+        NavigationView{
+            VStack(spacing: 0){
                 Image(systemName: "lock.shield.fill")
                     .font(.system(size: 160))
                 Spacer()
                 NavigationLink(destination: LoginView(), label: {
-                    HStack {
+                    HStack{
                         Spacer()
                         Text("로그인 하러가기")
                         Spacer()
@@ -17,11 +17,10 @@ struct LoginMain: View {
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 6))
-                })
-                Spacer()
-                    .frame(height: 40)
+                }).padding([.bottom], 10)
+                
                 NavigationLink(destination: RegisterView(), label: {
-                    HStack {
+                    HStack{
                         Spacer()
                         Text("회원가입 하러가기")
                         Spacer()
@@ -31,9 +30,9 @@ struct LoginMain: View {
                     .foregroundColor(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 6))
                 })
-                .padding([.bottom], 10)
+                Spacer().frame(height: 40)
                 NavigationLink(destination: ProfileView(), label: {
-                    HStack {
+                    HStack{
                         Spacer()
                         Text("내 프로필 보러가기")
                         Spacer()
@@ -42,25 +41,25 @@ struct LoginMain: View {
                     .background(Color.purple)
                     .foregroundColor(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 6))
-                })
-                .padding([.bottom], 10)
+                }).padding([.bottom], 10)
                 
                 NavigationLink(destination: UserListView(), label: {
-                                    HStack{
-                                        Spacer()
-                                        Text("사용자 목록 보러가기")
-                                        Spacer()
-                                    }
-                                    .padding()
-                                    .background(Color.green)
-                                    .foregroundColor(.white)
-                                    .clipShape(RoundedRectangle(cornerRadius: 6))
-                                })
+                    HStack{
+                        Spacer()
+                        Text("사용자 목록 보러가기")
+                        Spacer()
+                    }
+                    .padding()
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                })
                 Spacer()
                 Spacer()
-            }//Vstack
+            }//VStack
             .padding()
-        }//NavigationView
+        }// NavigationView
+        
     }
 }
 

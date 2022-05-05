@@ -3,12 +3,14 @@ import SwiftUI
 
 // 사용자 목록 뷰
 struct UserListView : View {
-//    @EnvironmentObject var userVM : UserVM
-    @State var users : [UserData] = []  //UserData 배열을 가짐
+    
+    @EnvironmentObject var userVM : UserVM
+    
+    @State var users : [UserData] = []
     
     var body: some View {
-        List(users){ aUser in //aUser (유저 한명씩 가져와주는 거)
-            NavigationLink(destination: OtherUserProfileView(userData: aUser), label: { //데이터에 있는 aUser 하나씩을 리스트로 foreach
+        List(users){ aUser in
+            NavigationLink(destination: OtherUserProfileView(userData: aUser), label: {
                 HStack{
                     AsyncImage(url: URL(string: aUser.avatar)!) { phase in
                         switch phase {
@@ -41,8 +43,8 @@ struct UserListView : View {
             })
         }
         .navigationTitle("사용자 목록")
-//        .onAppear(perform: { userVM.fetchUsers() })
-//        .onReceive(userVM.$users, perform: { self.users = $0 })
+        .onAppear(perform: { userVM.fetchUsers() })
+        .onReceive(userVM.$users, perform: { self.users = $0 })
         
     }
 }
