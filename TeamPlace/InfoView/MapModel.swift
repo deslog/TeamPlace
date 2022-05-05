@@ -39,7 +39,7 @@ struct MapModel: View {
                         .frame(width: 310, height: 40, alignment: .center)
             })
             .frame(width: 310, height: 40, alignment: .center)
-            .background(RoundedRectangle(cornerRadius: 10).fill(Color.brown))
+            .background(RoundedRectangle(cornerRadius: 10).fill(Color.primaryColor))
             .font(.system(size: 19))
             .foregroundColor(Color.white)
             .padding(EdgeInsets(top: screenHeight-200, leading: 0, bottom: 0, trailing: 0))
