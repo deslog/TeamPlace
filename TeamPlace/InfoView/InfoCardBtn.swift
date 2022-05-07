@@ -8,10 +8,6 @@ struct InfoCardBtn: View {
     @State private var showMapModal = false
     @State var wish = false
     
-//    let scenes = UIApplication.shared.connectedScenes
-//    let windowScenes = scenes.first as? UIWindowScene
-//    let window = windowScenes?.windows.first
-    
     func encodeURL(_ url: String) -> URL? {
         let encodedStr = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         return URL(string: encodedStr)!

@@ -12,7 +12,7 @@ struct PlaceList: View {
                             Image(place.imageURL)
                                 .resizable()
                                 .edgesIgnoringSafeArea(.all)
-//                                .aspectRatio(contentMode: .fill)
+                                .aspectRatio(contentMode: .fill)
                                 .frame(maxWidth: .infinity, maxHeight: 200)
                                 .overlay( Color.black.opacity(0.4))
                                 .clipShape(RoundedRectangle(cornerRadius: 10))

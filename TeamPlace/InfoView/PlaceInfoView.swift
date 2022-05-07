@@ -83,10 +83,10 @@ struct PlaceInfoView: View {
 
 
 
-//
-//struct PlaceInfoView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlaceInfoView(infoViewImage: "cafe2", infoViewName: "이름이뭐예요", infoViewAddress: "남구 12134", infoViewLat: 24.2, infoViewLon: 121.1)
-//            .previewInterfaceOrientation(.portraitUpsideDown)
-//    }
-//}
+
+struct PlaceInfoView_Previews: PreviewProvider {
+    static var previews: some View {
+        PlaceInfoView(infoViewImage: "cafe2", infoViewName: "이름이뭐예요", infoViewAddress: "남구 12134", infoViewLat: 24.2, infoViewLon: 121.1)
+            .previewInterfaceOrientation(.portraitUpsideDown)
+    }
+}
