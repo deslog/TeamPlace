@@ -5,96 +5,96 @@ struct ReviewModal: View {
     var reviewContent = Review.all()
     
     var body: some View {
-        VStack (spacing: 5){
-            VStack {
-                Text("분위기")
-                    .bold()
-                    .font(.system(size: 20))
-                    .frame(width: 100, height: 30, alignment: .center)
-                
+        ScrollView {
+            VStack (spacing: 5){
                 VStack {
-                    ForEach(reviewContent, id:\.self) { value in
-                        value.type == 1 ?
-                        Button(value.reviewContent) {
+                    Text("분위기")
+                        .bold()
+                        .font(.system(size: 20))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    VStack {
+                        ForEach(reviewContent, id:\.self) { value in
+                            value.type == 1 ?
+                            Button(value.reviewContent) {
+                            }
+                            .foregroundColor(Color.black)
+                            .frame(maxWidth: .infinity, idealHeight: 50)
+                            .background(RoundedRectangle(cornerRadius: 5)
+                                .fill(Color.lightlightGray))
+                            : nil
                         }
-                        .frame(width: 280, height: 30, alignment: .leading)
-                        .foregroundColor(Color.black)
-                        .background(RoundedRectangle(cornerRadius: 40)
-                            .fill(Color.lightGray))
-                        : nil
+                    }
+                }
+                VStack {
+                    Text("인테리어")
+                        .bold()
+                        .font(.system(size: 20))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    VStack {
+                        ForEach(reviewContent, id:\.self) { value in
+                            value.type == 2 ?
+                            Button(value.reviewContent) {
+                            }
+                            .foregroundColor(Color.black)
+                            .frame(maxWidth: .infinity, idealHeight: 50)
+                            .background(RoundedRectangle(cornerRadius: 5)
+                                .fill(Color.lightlightGray))
+                            : nil
+                        }
+                    }
+                }
+                VStack {
+                    Text("구성품")
+                        .bold()
+                        .font(.system(size: 20))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    VStack {
+                        ForEach(reviewContent, id:\.self) { value in
+                            value.type == 3 ?
+                            Button(value.reviewContent) {
+                            }
+                            .foregroundColor(Color.black)
+                            .frame(maxWidth: .infinity, idealHeight: 50)
+                            .background(RoundedRectangle(cornerRadius: 5)
+                                .fill(Color.lightlightGray))
+                            : nil
+                        }
+                    }
+                }
+                VStack {
+                    Text("기타")
+                        .bold()
+                        .font(.system(size: 20))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    VStack {
+                        ForEach(reviewContent, id:\.self) { value in
+                            value.type == 4 ?
+                            Button(value.reviewContent) {
+                            }
+                            .foregroundColor(Color.black)
+                            .frame(maxWidth: .infinity, idealHeight: 50)
+                            .background(RoundedRectangle(cornerRadius: 5)
+                                .fill(Color.lightlightGray))
+                            : nil
+                        }
                     }
                 }
             }
-            VStack {
-                Text("인테리어")
-                    .bold()
-                    .font(.system(size: 20))
-                    .frame(width: 100, height: 30, alignment: .center)
-                
-                VStack {
-                    ForEach(reviewContent, id:\.self) { value in
-                        value.type == 2 ?
-                        Button(value.reviewContent) {
-                        }
-                        .frame(width: 280, height: 30, alignment: .leading)
-                        .foregroundColor(Color.black)
-                        .background(RoundedRectangle(cornerRadius: 40)
-                            .fill(Color.lightGray))
-                        : nil
-                    }
-                }
-            }
-            VStack {
-                Text("구성품")
-                    .bold()
-                    .font(.system(size: 20))
-                    .frame(width: 100, height: 30, alignment: .center)
-                
-                VStack {
-                    ForEach(reviewContent, id:\.self) { value in
-                        value.type == 3 ?
-                        Button(value.reviewContent) {
-                        }
-                        .frame(width: 280, height: 30, alignment: .leading)
-                        .foregroundColor(Color.black)
-                        .background(RoundedRectangle(cornerRadius: 40)
-                            .fill(Color.lightGray))
-                        : nil
-                    }
-                }
-            }
-            VStack {
-                Text("기타")
-                    .bold()
-                    .font(.system(size: 20))
-                    .frame(width: 100, height: 30, alignment: .center)
-                
-                VStack {
-                    ForEach(reviewContent, id:\.self) { value in
-                        value.type == 4 ?
-                        Button(value.reviewContent) {
-                        }
-                        .frame(width: 280, height: 30, alignment: .leading)
-                        .foregroundColor(Color.black)
-                        .background(RoundedRectangle(cornerRadius: 40)
-                            .fill(Color.lightGray))
-                        : nil
-                    }
-                }
-            }
+            .padding(.all, 16)
         }
-        .padding(.all, 20)
         Button(action: {
             presentation.wrappedValue.dismiss()
         }, label: {
-            Text("선택완료:)").bold()
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                .ignoresSafeArea()
+            Text("선택완료:)")
+                .foregroundColor(Color.black)
+                .font(.system(size: 20))
         })
-        .frame(width: 310, height: 40, alignment: .center)
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color.primaryColor))
-        .font(.system(size: 16))
-        .foregroundColor(Color.black)
+        .frame(maxWidth: .infinity, maxHeight: 50)
+        .background(Color.primaryColor)
     }
 }
 
